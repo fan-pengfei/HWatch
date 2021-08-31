@@ -55,7 +55,7 @@ void SetUp()
 	LCD_1IN28_SetBackLight(g_config.hwatch_config.blight_level << 10);
 	LCD_1IN28_Init(VERTICAL);
 	
-	//HWatch_Logo();
+	HWatch_Logo();
 	
 	printf("LCD clear begin\n");
 	LCD_1IN28_Clear(BLACK);

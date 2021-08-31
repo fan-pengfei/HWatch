@@ -1,5 +1,5 @@
 Dependencies for Project 'HWatch', Target 'HWatch Configuration': (DO NOT MODIFY !)
-F (.\User\main.c)(0x612DA32C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I.\User -I.\Libraries\CMSIS -I.\Libraries\STM32F4xx_StdPeriph_Driver\inc -I.\Bsp -I.\Drivers -I.\User\Config -I.\User\Gui -I.\User\Fonts -I.\User\img -I.\User\Gui\lvgl -I.\User\Gui\lvgl\lvgl_driver -I.\User\Gui_App -I.\User\Stack-I D:\Git\HWatch\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (.\User\main.c)(0x612DEBCD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I.\User -I.\Libraries\CMSIS -I.\Libraries\STM32F4xx_StdPeriph_Driver\inc -I.\Bsp -I.\Drivers -I.\User\Config -I.\User\Gui -I.\User\Fonts -I.\User\img -I.\User\Gui\lvgl -I.\User\Gui\lvgl\lvgl_driver -I.\User\Gui_App -I.\User\Stack-I D:\Git\HWatch\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (User\stm32f4xx.h)(0x57AEE8B2)
 I (.\Libraries\CMSIS\core_cm4.h)(0x5559F3AE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -2189,7 +2189,7 @@ I (User\Gui_App\gui_calc.h)(0x61036094)
 I (.\User\Stack\calculator.h)(0x6110F678)
 I (User\Gui_App\gui_game_player.h)(0x610F7A63)
 I (User\Gui_App\gui_usb.h)(0x612BA527)
-F (.\User\Gui_App\gui_main.c)(0x612B633D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I.\User -I.\Libraries\CMSIS -I.\Libraries\STM32F4xx_StdPeriph_Driver\inc -I.\Bsp -I.\Drivers -I.\User\Config -I.\User\Gui -I.\User\Fonts -I.\User\img -I.\User\Gui\lvgl -I.\User\Gui\lvgl\lvgl_driver -I.\User\Gui_App -I.\User\Stack-I D:\Git\HWatch\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\obj\gui_main.o --omf_browse .\obj\gui_main.crf --depend .\obj\gui_main.d)
+F (.\User\Gui_App\gui_main.c)(0x612DEBDB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I.\User -I.\Libraries\CMSIS -I.\Libraries\STM32F4xx_StdPeriph_Driver\inc -I.\Bsp -I.\Drivers -I.\User\Config -I.\User\Gui -I.\User\Fonts -I.\User\img -I.\User\Gui\lvgl -I.\User\Gui\lvgl\lvgl_driver -I.\User\Gui_App -I.\User\Stack-I D:\Git\HWatch\RTE-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\obj\gui_main.o --omf_browse .\obj\gui_main.crf --depend .\obj\gui_main.d)
 I (User\Gui_App\gui_main.h)(0x60FDBAC6)
 I (User\Gui_App\gui_manager.h)(0x612BCB82)
 I (User\Gui_App\gui_inc.h)(0x612C5608)

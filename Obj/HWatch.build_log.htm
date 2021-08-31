@@ -26,16 +26,22 @@ Project File Date:  08/29/2021
 
 <h2>Output:</h2>
 Build target 'HWatch Configuration'
-compiling gui_usb.c...
+compiling main.c...
+.\User\Gui_App\gui_inc.h(130): warning:  #68-D: integer conversion resulted in a change of sign
+        lv_anim_set_delay(a, -100);
+.\Drivers\sysinfo.h(21): warning:  #1295-D: Deprecated declaration HWatchSysId_Get - give arg types
+  ChipID HWatchSysId_Get();
+User\main.c: 2 warnings, 0 errors
+compiling gui_main.c...
 .\Drivers\sysinfo.h(21): warning:  #1295-D: Deprecated declaration HWatchSysId_Get - give arg types
   ChipID HWatchSysId_Get();
 User\Gui_App\gui_inc.h(130): warning:  #68-D: integer conversion resulted in a change of sign
         lv_anim_set_delay(a, -100);
-User\Gui_App\gui_usb.c: 2 warnings, 0 errors
+User\Gui_App\gui_main.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=173364 RO-data=90320 RW-data=2028 ZI-data=108452  
+Program Size: Code=175392 RO-data=94332 RW-data=2044 ZI-data=108476  
 FromELF: creating hex file...
-".\Obj\HWatch.axf" - 0 Error(s), 2 Warning(s).
+".\Obj\HWatch.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\Git\HWatch\RTE
