@@ -1,4 +1,4 @@
-﻿#include "gui_manager.h"
+#include "gui_manager.h"
 
 GUI_IDS gui_ids;
 
@@ -20,6 +20,8 @@ static void gui_init(void);
 static void gui_style_init(void);
 void pageRegCallback(u8 a, short b);
 
+u8 lvgl_task_flag = TRUE;
+
 //lvgl 内存使用情况
 lv_mem_monitor_t hwatch_mem_monitor;
 
@@ -39,7 +41,8 @@ void GUI_ManagerInit()
 
 void GUI_TaskRun()
 {
-	lv_task_handler();
+	if(lvgl_task_flag)
+		lv_task_handler();
 }
 
 void GUI_TickRun()
@@ -52,7 +55,7 @@ void GUI_TickRun()
 //部分使用样式初始化
 static void gui_style_init()
 {
-	set_page_style(&page_style, 0, LV_OPA_TRANSP, LV_COLOR_WHITE, LV_COLOR_WHITE);
+	set_page_style(&page_style, 0, LV_OPA_TRANSP, LV_COLOR_RED, LV_COLOR_WHITE);
 	
 	lv_style_init(&lmeter_style);
 	lv_style_set_bg_opa(&lmeter_style, LV_STATE_DEFAULT, LV_OPA_TRANSP);
@@ -113,7 +116,7 @@ static void gui_init()
 	apps[app_heart] = lv_cont_create(NULL, NULL);
 	GUI_Heart_Init(apps[app_heart], group, pageRegCallback);
 	
-	//APP_GAMES
+	//APP_GAMES//内存不够了//取消这个。。
 	apps[app_games] = lv_cont_create(NULL, NULL);
 	GUI_Games_Init(apps[app_games], group, pageRegCallback);
 	
@@ -125,6 +128,9 @@ static void gui_init()
 	apps[app_calc] = lv_cont_create(NULL, NULL);
 	GUI_Calc_Init(apps[app_calc], group, pageRegCallback);
 	
+	//APP_USB
+	apps[app_usb] = lv_cont_create(NULL, NULL);
+	GUI_Usb_Init(apps[app_usb], group, pageRegCallback);
 	
 	//pageRegCallback((u8)p_apps, app_calender);
 }
@@ -180,6 +186,10 @@ void pageRegCallback(u8 a, short b)
 			case app_calc:
 				lv_scr_load_anim(apps[app_calc], LV_SCR_LOAD_ANIM_MOVE_BOTTOM, ANIM_TIME, 50, false);
 				GUI_Calc_FocusInit();		
+				break;
+			case app_usb:
+				lv_scr_load_anim(apps[app_usb], LV_SCR_LOAD_ANIM_MOVE_BOTTOM, ANIM_TIME, 50, false);
+				GUI_Usb_FocusInit();
 				break;
 		}
 		

@@ -1,4 +1,4 @@
-﻿#include "stm32f4xx.h"
+#include "stm32f4xx.h"
 #include "system.h"
 #include "stick.h"
 
@@ -28,7 +28,7 @@ void SetUp()
 	//HSI_SetSysClock(16, 432, 2, 9);
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
-	USART1_Init(9600);
+	USART1_Init(460800);
 	HT2828_Init();
 	
 	printf("HWatch device init...\n");
@@ -55,7 +55,7 @@ void SetUp()
 	LCD_1IN28_SetBackLight(g_config.hwatch_config.blight_level << 10);
 	LCD_1IN28_Init(VERTICAL);
 	
-	HWatch_Logo();
+	//HWatch_Logo();
 	
 	printf("LCD clear begin\n");
 	LCD_1IN28_Clear(BLACK);
@@ -69,10 +69,12 @@ void SetUp()
 	
 	//初始化完成
 	printf("HWatch system running...\n");
+	
 }
 
 void Loop()
 {
+	
 	for(;;)
 	{
 		GUI_TaskRun();

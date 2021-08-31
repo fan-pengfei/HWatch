@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file lv_port_disp_templ.c
  *
  */
@@ -25,6 +25,7 @@
 static lv_color_t *color_buf;
 
 static lv_disp_drv_t * disp_drv_p;
+
 
 /**********************
  *      TYPEDEFS
@@ -136,11 +137,11 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
 //        }
 //    }
     
-        //将指定区域显示缓冲区写入到屏幕
-        //
-        //或者DMA写入
-        //
-        LCD_1IN28_DisplayWindows(area->x1, area->y1, area->x2, area->y2, (u16*)color_p);
+		//将指定区域显示缓冲区写入到屏幕
+		//
+		//或者DMA写入
+		//
+		LCD_1IN28_DisplayWindows(area->x1, area->y1, area->x2, area->y2, (u16*)color_p);
 
     /* IMPORTANT!!!
      * Inform the graphics library that you are ready with the flushing*/
@@ -190,7 +191,8 @@ typedef int keep_pedantic_happy;
 void DMA1_Stream4_IRQHandler()
 {
     if(DMA_GetITStatus(DMA1_Stream4,DMA_IT_TCIF4)!=RESET)
-    {
+    {			
+				LCD_Disp.disp_flush = 0;
         lv_disp_flush_ready(disp_drv_p);
         DMA_ClearITPendingBit(DMA1_Stream4, DMA_IT_TCIF4);
     }

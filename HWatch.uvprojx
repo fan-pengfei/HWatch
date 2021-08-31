@@ -716,6 +716,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\Gui_App\gui_game_player.c</FilePath>
             </File>
+            <File>
+              <FileName>gui_usb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\Gui_App\gui_usb.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

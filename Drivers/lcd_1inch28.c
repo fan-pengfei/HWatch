@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
 * | File      	:   LCD_1inch28.c
 * | Author      :   Waveshare team
 * | Function    :   Hardware underlying interface
@@ -20,6 +20,8 @@
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
 
+LCD_1IN28_DISP LCD_Disp;
+UWORD lcd_disp_buf[128 * 32]; 
 
 /******************************************************************************
 function :	Hardware reset
@@ -362,6 +364,11 @@ void LCD_1IN28_Init(UBYTE Scan_dir)
     
     //Set the initialization register
     LCD_1IN28_InitReg();
+	
+		//Disp Init
+		LCD_Disp.disp_flush = 0;
+		LCD_Disp.disp_buf = lcd_disp_buf;
+		LCD_Disp.disp_size = sizeof(lcd_disp_buf)/sizeof(lcd_disp_buf[0]);
 }
 
 /********************************************************************************
@@ -447,7 +454,9 @@ void LCD_1IN28_DisplayWindows(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend
 		
 		//DMA传输
 		//先配置lv_conf.h文件中的LV_COLOR_16_SWAP宏定义交换字节顺序
-		HWatchSPI2_DMA_Send16(Image, totalpoint << 1);
+		//查看颜色值
+		//printf("%x\n", *Image);
+		HWatchSPI2_DMA_Send16(Image, totalpoint<<1);
 	
 }
 

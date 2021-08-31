@@ -1,4 +1,4 @@
-﻿#include "lcd_config.h"
+#include "lcd_config.h"
 
 u8 dev_init = 0;
 

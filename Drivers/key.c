@@ -1,4 +1,4 @@
-﻿#include "key.h"
+#include "key.h"
 
 void KEY_Init(void)
 {
@@ -22,7 +22,7 @@ u8 KEY_Scan(u8 mode)
 	if(key==1&&(K_UP==1||K_DOWN==0||K_LEFT==0||K_RIGHT==0||K_A==0||K_B==0)) //任意一个按键按下
 	{
 //		Delay_Ms(5);  //消抖
-		GUI_Sound_Delay(20, STATE_OFF);
+		GUI_Sound_Delay(10, STATE_OFF);
 		key=0;
 		if(K_UP==1)
 		{

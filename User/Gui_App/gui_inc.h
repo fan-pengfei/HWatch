@@ -1,4 +1,4 @@
-﻿#ifndef GUI_INC_H_INCLUDED
+#ifndef GUI_INC_H_INCLUDED
 #define GUI_INC_H_INCLUDED
 
 #include "system.h"
@@ -22,12 +22,13 @@
 #define APP_GAMES "Games"
 #define APP_CALENDER "Calendar"
 #define APP_CALC	"Calculator"
+#define APP_USB "Usb"
 
 #define WIN_W LCD_1IN28_WIDTH
 #define WIN_H LCD_1IN28_HEIGHT
 
 #define PAGE_COUNT 2
-#define APPS_COUNT 7
+#define APPS_COUNT 8
 #define GAME_COUNT 6
 #define SETTING_COUNT 5
 
@@ -61,6 +62,7 @@ typedef enum{
 	app_games,			//内置游戏页
 	app_calc,			//计算器
 	app_calendar,	//日历
+	app_usb,			//PC&USB通信//显示图像//字库里没有合适的图标。。。
 	app_about,		//关于页
 }APP_ID;
 

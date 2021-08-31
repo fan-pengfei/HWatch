@@ -1,4 +1,4 @@
-﻿#include "gui_main.h"
+#include "gui_main.h"
 
 static lv_obj_t *m_main;
 
@@ -89,8 +89,8 @@ static void main_task(lv_task_t *task)
 	//定时关闭屏幕背光
 	if(g_config.hwatch_config.screen_state && ++screen_lock_t_num == g_config.hwatch_config.home_screen_lock_t)
 	{
-		g_config.hwatch_config.screen_state = STATE_OFF;
-		LCD_1IN28_SetBackLight(STATE_OFF);
+		//g_config.hwatch_config.screen_state = STATE_OFF;
+		//LCD_1IN28_SetBackLight(STATE_OFF);
 	}
 	
 	//5s更新一次温湿度等信息

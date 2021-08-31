@@ -12,12 +12,15 @@
 #include "gui_calender.h"
 #include "gui_calc.h"
 #include "gui_game_player.h"
+#include "gui_usb.h"
 
 extern lv_style_t page_style;
 extern lv_style_t lmeter_style;
 extern lv_style_t font_style, font_style1, font_style2;
 extern lv_style_t icons_style, icons_style1; /*icons_style2*/;
 extern lv_style_t chart_style;;
+
+extern u8 lvgl_task_flag;
 
 void GUI_ManagerInit(void);
 void GUI_TaskRun(void);

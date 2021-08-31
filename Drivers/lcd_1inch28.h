@@ -47,6 +47,14 @@ typedef struct{
 }LCD_1IN28_ATTRIBUTES;
 extern LCD_1IN28_ATTRIBUTES LCD_1IN28;
 
+typedef struct{
+	UBYTE disp_flush;
+	UBYTE disp_play;
+	UWORD *disp_buf;
+	UWORD disp_size;
+	UWORD disp_row;
+}LCD_1IN28_DISP;
+extern LCD_1IN28_DISP LCD_Disp;
 /********************************************************************************
 function:	
 			Macro definition variable name

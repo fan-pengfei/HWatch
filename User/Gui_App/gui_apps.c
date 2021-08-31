@@ -7,6 +7,7 @@ static const char* list_item_name[] ={
 	"Game",
 	"Calculator",
 	"Calendar",
+	"Usb",
 	"About"
 };
 
@@ -17,6 +18,7 @@ const char *list_item_icon[] = {
 	HWATCH_SYMBOL_GAME,
 	HWATCH_SYMBOL_CALC,
 	HWATCH_SYMBOL_CALENDAR,
+	HWATCH_SYMBOL_USB,
 	HWATCH_SYMBOL_ABOUT
 };
 
